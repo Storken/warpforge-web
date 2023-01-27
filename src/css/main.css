@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #ff5c00;
+  --primary-color: hsla(22, 75%, 50%);
   --secondary-color: #50514f;
-  --text-color: #ffffff;
-  --link-color: hsl(292, 52%, 58%);
+  --text-color: hsl(292, 30%, 90%);
+  --link-color: hsl(292, 52%, 48%);
   --background-color: #000;
-  --light-background-color: hsl(292, 70%, 10%);
+  --light-background-color: hsl(292, 70%, 7%);
 
   /* Space */
   --space-xs: 0.25em;
@@ -31,6 +31,8 @@ body {
   background-position-y: -700px;
   background-position-x: 60%;
   text-overflow: word-break;
+  word-wrap: break-word;
+  line-height: 1.5;
 }
 
 .body--no-max {
@@ -97,6 +99,7 @@ h2:after {
   background-color: var(--primary-color);
   transform: skewX(-20deg);
   left: -1em;
+  top: 0;
   height: 1.25em;
   width: 0.35em;
 }
@@ -107,9 +110,9 @@ h3 {
 
 a.header-anchor:before {
   content: '#';
-  color: var(--text-color);
+  color: var(--link-color);
   position: absolute;
-  right: 0;
+  right: -20px;
 }
 
 a.header-anchor:focus:before {
@@ -124,7 +127,8 @@ code {
   width: 100%;
   background-color: #ffffff50;
   border-radius: 4px;
-  padding: 0 var(--space-xs) var(--space-xs) var(--space-xs);
+  padding: 0 var(--space-xs);
+  border: 1px solid var(--primary-color);
 }
 
 pre {
@@ -132,12 +136,15 @@ pre {
   background-color: #ffffff50;
   border-radius: 4px;
   padding: 0 var(--space-xs) var(--space-xs) var(--space-xs);
+  border: 1px solid var(--primary-color);
+  tab-size: 3;
 }
 
 pre code {
   background-color: transparent;
   border-radius: 4px;
   padding: 0;
+  border: 0;
 }
 
 @media screen and (min-width: 768px) {

@@ -95,35 +95,35 @@ We already said yes, didn't we?
 
 It might look something like this:
 
-```
+```json
 {
-        "inputs": {
-                "thingy": "literal:somevalues"
-        },
-        "steps": {
-                "hello-world": {
-                        "protoformula": {
-                                "inputs": {
-                                        "$param": "pipe::thingy"
-                                },
-                                "action": {
-                                        "wasm": {
-                                                "interpreter": "wasm2022",
-                                                "contents": "bafybytecodecid"
-                                        }
-                                },
-                                "outputs": {
-                                        "out": {
-                                                "from": "$varname",
-                                                "packtype": "literal"
-                                        }
-                                }
-                        }
-                }
-        },
-        "outputs": {
-                "output": "pipe:hello-wasm:out"
-        }
+	"inputs": {
+		"thingy": "literal:somevalues"
+	},
+	"steps": {
+		"hello-world": {
+			"protoformula": {
+				"inputs": {
+					"$param": "pipe::thingy"
+				},
+				"action": {
+					"wasm": {
+						"interpreter": "wasm2022",
+						"contents": "bafybytecodecid"
+					}
+				},
+				"outputs": {
+					"out": {
+						"from": "$varname",
+						"packtype": "literal"
+					}
+				}
+			}
+		}
+	},
+	"outputs": {
+		"output": "pipe:hello-wasm:out"
+	}
 }
 ```
 

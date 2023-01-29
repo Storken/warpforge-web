@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('/fonts/CooperHewitt-Medium.otf');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --primary-color: hsla(22, 75%, 50%);
   --secondary-color: #50514f;
   --text-color: hsl(292, 30%, 90%);
   --link-color: hsl(292, 52%, 48%);
+  --link-color-hover: hsl(292, 52%, 65%);
   --background-color: #000;
   --light-background-color: hsl(292, 70%, 7%);
 
@@ -21,7 +31,7 @@ html {
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   padding: var(--space-lg) var(--space-xl);
   margin: auto;
   color: var(--text-color);
@@ -48,9 +58,15 @@ body {
 }
 
 main {
-  margin: auto;
-  max-width: 80ch;
-  width: 100%;
+  max-width: 50ch;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: auto;
+    max-width: 80ch;
+    width: 100%;
+  }
 }
 
 a {
@@ -60,6 +76,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: var(--link-color-hover);
 }
 
 h1,
@@ -67,11 +84,13 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: 'Cooper Hewitt', verdana;
   color: var(--text-color);
   position: relative;
 }
 
 h1 {
+  font-family: 'Open Sans', sans-serif;
   padding: var(--space-md) 0;
   margin: var(--space-lg) 0;
   font-size: 1.5em;
@@ -121,6 +140,7 @@ a.header-anchor:focus:before {
 
 a.header-anchor:hover:before {
   border-bottom: 1px solid var(--secondary-color);
+  color: var(--link-color-hover);
 }
 
 code {

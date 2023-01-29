@@ -1,21 +1,21 @@
 footer {
-  width: 100%;
-  padding: var(--space-lg);
   margin: var(--space-xl) auto;
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  width: 100%;
 }
 
 footer .logo img {
   width: 100px;
   height: auto;
+  padding: 0 var(--space-lg);
 }
 
 .footer-navigation {
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%;
+  padding: 0 var(--space-lg);
 }
 
 @media (min-width: 768px) {
